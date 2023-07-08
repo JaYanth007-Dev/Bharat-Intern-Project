@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+.brand {
+    font-family: 'Montserrat';
+    font-weight: 700;
+}
+.brand {
+    font-family: 'Lato';
+    font-weight: 700;
+}
