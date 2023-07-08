@@ -1,5 +1,4 @@
 import WriteButton from "./WriteButton";
-// import HomeImg from "../Assets/pexels-negative-space-34658.jpg";
 import VideoFile from '../Assets/vedio.mp4';
 const HomeCard = () => {
     return (
@@ -17,7 +16,6 @@ const HomeCard = () => {
                 </div>
                 
                 <div className="flex justify-end" >
-                    {/* <img alt="logo" className="w-[540px] hover:scale-105 border-[10px] border-rose-950 " src={HomeImg}/>         */}
                     <video  className="border-8 border-[#00ffff]" autoPlay loop muted width="500" >
                         <source src={VideoFile} type="video/mp4"/>
 
