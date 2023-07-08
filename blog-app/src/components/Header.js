@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import SearchBar from "./SearchBar";
  
 const Logo = () => (
@@ -10,13 +11,14 @@ const Logo = () => (
 const Header = () => {
   return (
     <>
-    <div className='flex justify-between items-center pt-7 px-5 bg-black'>
+    <div className='sticky top-0 flex justify-between items-center pt-5 pb-3 px-5 bg-black'>
       <Logo />
       <ul className='flex cursor-pointer gap-8 text-[18px] pr-10 text-white  '>
-        <li>Home</li>
-        <li>Write Blog</li>
-        <li>Collections</li>
-        <li>Fav Images</li>
+        <li><Link to="/">Home</Link></li>
+        <li><Link to="/Write-Blog">Write Blog</Link></li>
+        <li><Link to="/Collections">Collections</Link></li>
+        <li><Link to="/Favourites">Favourites</Link></li>
+       
       </ul>
       </div>
       <SearchBar/>
