@@ -4,7 +4,7 @@ import Header from "./components/Header";
 import HomeCard from "./components/HomeCard";
 import Footer from "./components/Footer";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
-import BlogCollection from "./components/BlogCollection";
+import BlogCard from "./components/BlogCard";
 import ErrorPage from "./components/ErrorPage";
 import BlogCreationForm from "./components/BlogCreationForm";
 import FavouriteBlogs from './components/FavouriteBlogs';
@@ -36,7 +36,7 @@ const appRouter = createBrowserRouter([
       },
       {
         path: "/Collections",
-        element: <BlogCollection />,
+        element: <BlogCard />,
         errorElement: <ErrorPage />
       },
       {

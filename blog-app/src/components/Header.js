@@ -11,7 +11,7 @@ const Logo = () => (
 const Header = () => {
   return (
     <>
-    <div className='sticky top-0 flex justify-between items-center pt-5 pb-3 px-5 bg-black'>
+    <div className='sticky z-0 overflow-hidden top-0 flex justify-between items-center pt-5 pb-3 px-5 bg-black'>
       <Logo />
       <ul className='flex cursor-pointer gap-8 text-[18px] pr-10 text-white  '>
         <li><Link to="/">Home</Link></li>
