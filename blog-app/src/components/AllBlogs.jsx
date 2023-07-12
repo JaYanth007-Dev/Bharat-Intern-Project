@@ -49,7 +49,7 @@ const AllBlogs = ({ blogs }) => {
           </div>
           <div className="flex justify-center py-[10px]">
             <Link to="/writeblog">
-              <Button text="Write Blog" />
+              <Button text="Write Blog"/>
             </Link>
           </div>
         </div>
