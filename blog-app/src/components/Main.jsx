@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { useEffect } from "react";
 import VideoFile from "../assets/vedio.mp4";
 import WriteButton from "./WriteButton";
-import BgImage from "../assets/wallpaperflare.com_wallpaper.jpg";
+
 
 const Main = () => {
   useEffect(() => {

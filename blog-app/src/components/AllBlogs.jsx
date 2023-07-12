@@ -2,6 +2,7 @@ import  { useState } from "react";
 import Card from "./Card";
 import { Link } from "react-router-dom";
 import Button from "./Button";
+import BlankImage from "../assets/blank-removebg-preview.png"
 
 const AllBlogs = ({ blogs }) => {
   const [searchTerm, setSearchTerm] = useState("");
@@ -34,8 +35,8 @@ const AllBlogs = ({ blogs }) => {
       </div>
       {filteredBlogs.length === 0 ? (
         <>
-          <img />
         <p className="text-2xl font-montserrat font-semibold text-[#fff] text-center mt-5 h-[50vh] flex flex-col justify-center">
+          <img alt="noblogLogo" src={ BlankImage} width='500px' className="ml-[350px]" />
           No blogs available
         </p>
         </>

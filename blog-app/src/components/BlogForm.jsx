@@ -1,6 +1,6 @@
 import { useState } from "react";
 import WriteButton from "./WriteButton";
-import BgImage from "../assets/wallpaperflare.com_wallpaper.jpg"
+
 
 const BlogForm = ({ onFormSubmit }) => {
   const [formData, setFormData] = useState({
