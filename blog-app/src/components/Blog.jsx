@@ -65,7 +65,7 @@ const Blog = ({ blog, onDelete }) => {
           <div className="border border-[#fff]/30 w-[88%]  mx-auto mb-10"></div>
           <div className="w-[40vw] h-[35vh] mx-auto group overflow-hidden rounded-[10px]">
             <img
-              className="w-[100%] h-[100%] rounded-[10px] border border-[#fff]/80 shadow-xl transition-all duration-300 transform group-hover:scale-105 "
+              className="w-[50%] h-[100%] rounded-[10px] border border-[#fff]/80 shadow-xl transition-all duration-300 transform group-hover:scale-105 "
               src={wallpaper}
               alt="Wallpaper"
             />
@@ -75,7 +75,7 @@ const Blog = ({ blog, onDelete }) => {
           </div>
           <div className="flex justify-end items-center gap-[15px] pr-[30px] pb-[20px]">
             <Link to={`/edit/${blog.id}`}>
-              <button className="outline-none text-white text-[16px] font-semibold rounded-lg px-4 py-2 cursor-pointer  bg-gradient-to-r from-[#ff9a9e] to-[#f6416c] font-montserrat border border-[#fff] flex items-center gap-[10px]">
+              <button className="outline-none text-white text-[16px] font-semibold rounded-lg px-4 py-2 cursor-pointer  bg-black font-montserrat border border-[#fff] flex items-center gap-[10px]">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   height="20px"
@@ -92,7 +92,7 @@ const Blog = ({ blog, onDelete }) => {
             </Link>
             <button
               onClick={handleDelete}
-              className="outline-none text-white text-[16px] font-semibold rounded-lg px-4 py-2 cursor-pointer  bg-gradient-to-r from-[#ff9a9e] to-[#f6416c] font-montserrat border border-[#fff] flex items-center gap-[10px]"
+              className="outline-none text-white text-[16px] font-semibold rounded-lg px-4 py-2 cursor-pointer  bg-black font-montserrat border border-[#fff] flex items-center gap-[10px]"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"

@@ -1,5 +1,5 @@
-import React from 'react'
-import Pencil from "./../Assets/pencil-icon.png"
+
+import Pencil from "./../assets/pencil-icon.png"
 
 const WriteButton = ({ text }) => {
     return (

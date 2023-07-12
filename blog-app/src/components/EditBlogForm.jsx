@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import Button from "../components/WriteButton";
+import Button from "./Button";
 
 const EditBlogForm = ({ blog, onFormSubmit }) => {
   const [formData, setFormData] = useState({

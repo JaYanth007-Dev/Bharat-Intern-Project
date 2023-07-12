@@ -1,24 +1,16 @@
-import { useState, useEffect } from "react";
-import Button from "../components/WriteButton";
+import { useState } from "react";
+import WriteButton from "./WriteButton";
+import BgImage from "../assets/wallpaperflare.com_wallpaper.jpg"
 
-const EditBlogForm = ({ blog, onFormSubmit }) => {
+const BlogForm = ({ onFormSubmit }) => {
   const [formData, setFormData] = useState({
     wallpaper: "",
     title: "",
     description: "",
+    // links:"",
     userImage: "",
     username: "",
   });
-
-  useEffect(() => {
-    setFormData({
-      wallpaper: blog.wallpaper,
-      title: blog.title,
-      description: blog.description,
-      userImage: blog.userImage,
-      username: blog.username,
-    });
-  }, [blog]);
 
   const handleInputChange = (e) => {
     const { name, value, files } = e.target;
@@ -46,38 +38,26 @@ const EditBlogForm = ({ blog, onFormSubmit }) => {
       alert("All fields are required");
       return;
     }
-
-    const updatedBlog = {
-      ...blog,
-      wallpaper: formData.wallpaper,
-      title: formData.title,
-      description: formData.description,
-      userImage: formData.userImage,
-      username: formData.username,
-    };
-
-    onFormSubmit(updatedBlog);
+    console.log(formData);
+    onFormSubmit(formData);
+    setFormData({
+      wallpaper: "",
+      title: "",
+      description: "",
+      // links:"",
+      userImage: "",
+      username: "",
+    });
   };
 
   return (
     <div className="flex flex-col gap-[10px] w-[88%] mx-auto h-[80vh] items-center">
-      <p className="text-[30px] text-[#fff] font-montserrat">EDIT BLOG</p>
+       <p className="text-[30px] text-[#fff] font-montserrat">Write Your Blog</p>
       <form
         className="h-[full] w-[50vw] bg-transparent flex justify-center  flex-col shadow-xl rounded-xl p-[25px] border border-[#fff]/20"
         onSubmit={handleSubmit}
       >
-        <div className="mb-2">
-          <label htmlFor="wallpaper" className="text-[#fff] text-[18px] mb-1">
-            Wallpaper
-          </label>
-          <input
-            type="file"
-            id="wallpaper"
-            name="wallpaper"
-            onChange={handleInputChange}
-            className="mt-1 px-5 py-2 border border-gray-300 rounded-[30px] w-full text-[#fff] text-[18px]"
-          />
-        </div>
+      
         <div className="mb-2">
           <input
             type="text"
@@ -85,7 +65,7 @@ const EditBlogForm = ({ blog, onFormSubmit }) => {
             name="title"
             value={formData.title}
             onChange={handleInputChange}
-            placeholder="Title"
+            placeholder="Article Title"
             className="mt-1 px-5 py-2 border border-gray-300 rounded-[30px] w-full bg-transparent outline-none text-[#fff] placeholder-[#fff] text-[18px]"
           />
         </div>
@@ -95,9 +75,33 @@ const EditBlogForm = ({ blog, onFormSubmit }) => {
             name="description"
             value={formData.description}
             onChange={handleInputChange}
-            placeholder="Description"
+            placeholder="Article Description"
             className="mt-1 px-5 py-2 border border-gray-300 rounded-[30px] w-full bg-transparent outline-none text-[#fff] placeholder-[#fff] text-[18px]"
           ></textarea>
+            <div className="mb-2">
+          <label htmlFor="wallpaper" className="text-[#fff] text-[18px] mb-1">
+            Background Image
+          </label>
+          <input
+            type="file"
+            id="wallpaper"
+            name="wallpaper"
+            onChange={handleInputChange}
+            className="mt-1 px-5 py-2 border border-gray-300 rounded-[30px] w-full text-[#fff] text-[18px]"
+          />
+        </div>
+        </div>
+
+        <div className="mb-2">
+          <input
+            type="text"
+            id="username"
+            name="username"
+            value={formData.username}
+            onChange={handleInputChange}
+            placeholder="User Name"
+            className="mt-1 px-5 py-2 border border-gray-300 rounded-[30px] w-full bg-transparent outline-none text-[#fff] placeholder-[#fff] text-[18px]"
+          />
         </div>
         <div className="mb-2">
           <label htmlFor="userImage" className="text-[#fff] text-[18px] mb-1">
@@ -111,23 +115,14 @@ const EditBlogForm = ({ blog, onFormSubmit }) => {
             className="mt-1 px-5 py-2 border border-gray-300 rounded-[30px] w-full bg-transparent outline-none text-[#fff] text-[18px]"
           />
         </div>
-        <div className="mb-2">
-          <input
-            type="text"
-            id="username"
-            name="username"
-            value={formData.username}
-            onChange={handleInputChange}
-            placeholder="Username"
-            className="mt-1 px-5 py-2 border border-gray-300 rounded-[30px] w-full bg-transparent outline-none text-[#fff] placeholder-[#fff] text-[18px]"
-          />
-        </div>
+
+        
         <div className="flex flex-row justify-center items-center mt-2">
-          <Button text="Save Blog" />
+          <WriteButton text="Save Blog" />
         </div>
       </form>
     </div>
   );
 };
 
-export default EditBlogForm;
+export default BlogForm;
