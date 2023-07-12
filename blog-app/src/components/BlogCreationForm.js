@@ -1,10 +1,10 @@
-import { useState } from "react";
+import { useState,createContext } from "react";
 import Button from "./WriteButton";
 import BgImage from "../Assets/wallpaperflare-cropped.jpg"
 import BlogCard from "./BlogCard";
 
 
-const BlogCreationForm = ({ onFormSubmit }) => {
+const BlogCreationForm = ({blog onFormSubmit }) => {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
   const [image, setImage] = useState(null);
@@ -45,8 +45,10 @@ const BlogCreationForm = ({ onFormSubmit }) => {
     setDescription("");
     setImage(null);
     setUsername("");
-    <BlogCard {...formData} />
+
+    
   };
+  
   return (
       <div className="flex ">
           <img alt="bgImage" className="w-full h-[85vh]" src={ BgImage} />

@@ -4,10 +4,16 @@ import Header from "./components/Header";
 import HomeCard from "./components/HomeCard";
 import Footer from "./components/Footer";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
-import BlogCard from "./components/BlogCard";
+import Card from "./components/Card";
 import ErrorPage from "./components/ErrorPage";
-import BlogCreationForm from "./components/BlogCreationForm";
-import FavouriteBlogs from './components/FavouriteBlogs';
+import BlogForm from "./components/BlogCreationForm";
+import Allblogs from './components/AllBlogs';
+
+
+
+
+
+
 const AppLayout = () => {
   return (
     <div className="w-full">
@@ -31,24 +37,27 @@ const appRouter = createBrowserRouter([
       },
       {
         path: "/Write-Blog",
-        element: <BlogCreationForm />,
+        element: <BlogForm />,
         errorElement: <ErrorPage />
       },
       {
         path: "/Collections",
-        element: <BlogCard />,
+        element: <Card />,
         errorElement: <ErrorPage />
       },
       {
         path: "/Favourites",
-        element: <FavouriteBlogs/>,
+        element: <Allblogs />,
         errorElement: <ErrorPage/>
       },
+     
+
     ],
 
   },
 
 ]);
+
 
 
 
